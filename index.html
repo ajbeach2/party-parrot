@@ -1,0 +1,22 @@
+<div id="root"></div>
+<script>
+var w = window.innerWidth;
+var h = window.innerHeight;
+var parrotWidth = 30;
+var parrotHeight = 25;
+var columns =  Math.floor(w / (parrotWidth * 2));
+var rows = Math.floor(h / parrotHeight);
+var fragment = document.createDocumentFragment();
+for (var i = 0; i < rows; i++) {
+	for(var j = 0; j < columns; j++){
+		let img1 = document.createElement('img');
+    let img2 = document.createElement('img');
+		img1.src = "http://cultofthepartyparrot.com/parrots/aussiereversecongaparrot.gif";
+    img2.src = "http://emojis.slackmojis.com/emojis/images/1471119455/978/conga_parrot.gif";
+    fragment.appendChild(img1);
+    fragment.appendChild(img2);
+  }
+}
+var div = document.getElementById("root");
+div.appendChild(fragment);
+</script>
